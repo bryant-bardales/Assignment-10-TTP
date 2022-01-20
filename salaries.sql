@@ -1,6 +1,6 @@
 create table salaries (
 	empl_id INT,
-	salary INT,
+	salary TEXT,
 	from_date DATE,
 	to_date DATE,
 	dept_name VARCHAR(50)
