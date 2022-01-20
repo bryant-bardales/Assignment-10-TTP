@@ -12,9 +12,15 @@ const pool = new Pool({
   port: 5432,
 })
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+const port = 8000
+
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
+
 
 
 const onboardEmployee = (req, res) => {
@@ -41,4 +47,5 @@ app.post("/onboard_dpt", onboardEmployee)
 
 app.get("/employees", getEmployeeById)
 
-app.listen(8000)
+app.listen(port)
+
