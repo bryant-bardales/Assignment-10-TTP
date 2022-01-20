@@ -1,0 +1,22 @@
+{
+  "name": "assignment-10-ttp",
+  "version": "1.0.0",
+  "description": "## A collaborative project by Yankang Xue, Bryant Bardales, and Idris Adeboyejo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KanG98/Assignment-10-TTP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KanG98/Assignment-10-TTP/issues"
+  },
+  "homepage": "https://github.com/KanG98/Assignment-10-TTP#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
