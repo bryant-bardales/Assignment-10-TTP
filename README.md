@@ -1,4 +1,5 @@
-# Assignment 10: Database Practice Tech Talent Pipeline Program
+# Assignment 10: Database Practice 
+# Tech Talent Pipeline Program
 
 ## A collaborative project by Yankang Xue, Bryant Bardales, and Idris Adeboyejo
 
