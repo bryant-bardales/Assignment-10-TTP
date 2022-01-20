@@ -1,0 +1,96 @@
+2 tables
+
+SELECT salaries.empl_id, title, salaries.from_date, salaries.to_date, salaries.salary FROM salaries INNER JOIN job_titles ON salaries.salary = job_titles.salary;
+
+
+ empl_id |           title            | from_date  |  to_date   |   salary   
+---------+----------------------------+------------+------------+------------
+       1 | Help Desk Technician       | 2019-05-06 | 2020-06-19 | $86789.94
+       2 | Human Resources Manager    | 2016-05-16 | 2021-07-11 | $198265.82
+       3 | Assistant Media Planner    | 2017-09-17 | 2021-07-11 | $179311.84
+       4 | Health Coach III           | 2018-06-05 | 2019-01-04 | $103383.62
+       5 | Quality Engineer           | 2019-02-24 | 2018-03-09 | $149355.21
+       6 | Geologist III              | 2018-12-24 | 2018-05-25 | $86811.67
+       7 | Office Assistant II        | 2017-07-31 | 2019-10-04 | $148438.92
+       8 | Programmer II              | 2016-12-26 | 2018-12-12 | $153124.95
+       9 | Accountant II              | 2018-07-26 | 2018-06-10 | $150506.53
+      10 | Quality Control Specialist | 2017-09-30 | 2019-08-12 | $94426.81
+      11 | GIS Technical Architect    | 2018-10-28 | 2020-10-12 | $188469.17
+      12 | Accountant III             | 2018-12-15 | 2020-11-10 | $183383.77
+      13 | Systems Administrator II   | 2016-04-27 | 2021-06-10 | $136646.96
+      14 | Director of Sales          | 2016-11-21 | 2020-06-28 | $186274.75
+      15 | Dental Hygienist           | 2016-04-18 | 2019-01-27 | $151865.26
+      16 | Environmental Tech         | 2019-09-04 | 2018-04-18 | $83943.69
+      17 | VP Quality Control         | 2019-09-30 | 2018-05-17 | $145394.75
+      18 | Engineer III               | 2019-11-04 | 2018-05-29 | $126253.45
+      19 | Web Designer IV            | 2017-09-21 | 2018-01-27 | $151882.97
+      20 | General Manager            | 2016-04-12 | 2019-03-29 | $185287.19
+      21 | Senior Editor              | 2016-06-14 | 2021-10-17 | $198483.22
+      22 | Senior Editor              | 2018-02-05 | 2018-02-28 | $197739.08
+      23 | Senior Editor              | 2019-02-03 | 2019-11-28 | $156253.35
+      24 | Design Engineer            | 2019-03-12 | 2019-07-17 | $120364.05
+      25 | Teacher                    | 2018-07-10 | 2019-07-22 | $90069.24
+      26 | Safety Technician IV       | 2016-07-15 | 2017-11-06 | $185454.83
+      27 | Sales Representative       | 2018-08-11 | 2019-05-14 | $186264.41
+      28 | Nurse                      | 2016-12-05 | 2020-10-12 | $198588.19
+      29 | Analyst Programmer         | 2016-12-09 | 2021-08-02 | $82598.06
+      30 | Associate Professor        | 2019-02-25 | 2018-02-05 | $154725.98
+(30 rows)
+
+3 tables:
+
+SELECT employee.empl_id, departments.dept_name FROM salaries INNER JOIN employee on salaries.dept_name = employee.dept_name INNER JOIN departments ON employee.dept_name = departments.dept_name;
+
+
+ empl_id |        dept_name         
+---------+--------------------------
+       1 | Business Development
+       7 | Business Development
+      10 | Business Development
+       1 | Business Development
+       7 | Business Development
+      10 | Business Development
+       1 | Business Development
+       7 | Business Development
+      10 | Business Development
+       2 | Engineering
+      14 | Engineering
+       2 | Engineering
+      14 | Engineering
+       3 | Human Resources
+      12 | Human Resources
+      18 | Human Resources
+       3 | Human Resources
+      12 | Human Resources
+      18 | Human Resources
+       3 | Human Resources
+      12 | Human Resources
+      18 | Human Resources
+       4 | Legal
+       5 | Legal
+       6 | Legal
+       9 | Legal
+
+4 tables:
+
+SELECT * FROM employee e
+INNER JOIN salaries s ON e.empl_id = s.empl_id
+INNER JOIN job_titles j ON e.empl_id = j.empl_id
+INNER JOIN departments d ON e.empl_id = d.empl_id;
+
+
+ empl_id |      username      | gender |             email             | from_date  |  to_date   |        dept_name         | empl_id |   salary   | from_date  |  to_date   |        dept_name         | empl_id |           title            | from_date  |  to_date   |   salary   | empl_id |        dept_name         
+---------+--------------------+--------+-------------------------------+------------+------------+--------------------------+---------+------------+------------+------------+--------------------------+---------+----------------------------+------------+------------+------------+---------+--------------------------
+       1 | Consuelo Robelet   | Male   | crobelet0@feedburner.com      | 2019-05-06 | 2020-06-19 | Business Development     |       1 | $86789.94  | 2019-05-06 | 2020-06-19 | Business Development     |       1 | Help Desk Technician       | 2019-05-06 | 2020-06-19 | $86789.94  |       1 | Business Development
+       2 | Gabe McGriele      | Female | gmcgriele1@umn.edu            | 2016-05-16 | 2021-07-11 | Engineering              |       2 | $198265.82 | 2016-05-16 | 2021-07-11 | Engineering              |       2 | Human Resources Manager    | 2016-05-16 | 2021-07-11 | $198265.82 |       2 | Engineering
+       3 | Dalila Dykins      | Female | ddykins2@diigo.com            | 2017-09-17 | 2021-07-11 | Human Resources          |       3 | $179311.84 | 2017-09-17 | 2021-07-11 | Human Resources          |       3 | Assistant Media Planner    | 2017-09-17 | 2021-07-11 | $179311.84 |       3 | Human Resources
+       4 | Jocelin Goozee     | Female | jgoozee3@sakura.ne.jp         | 2018-06-05 | 2019-01-04 | Legal                    |       4 | $103383.62 | 2018-06-05 | 2019-01-04 | Legal                    |       4 | Health Coach III           | 2018-06-05 | 2019-01-04 | $103383.62 |       4 | Legal
+       5 | Dillie Tinan       | Male   | dtinan4@example.com           | 2019-02-24 | 2018-03-09 | Legal                    |       5 | $149355.21 | 2019-02-24 | 2018-03-09 | Legal                    |       5 | Quality Engineer           | 2019-02-24 | 2018-03-09 | $149355.21 |       5 | Legal
+       6 | Darell Barrable    | Male   | dbarrable5@miibeian.gov.cn    | 2018-12-24 | 2018-05-25 | Legal                    |       6 | $86811.67  | 2018-12-24 | 2018-05-25 | Legal                    |       6 | Geologist III              | 2018-12-24 | 2018-05-25 | $86811.67  |       6 | Legal
+       7 | Debi Coan          | Female | dcoan6@netscape.com           | 2017-07-31 | 2019-10-04 | Business Development     |       7 | $148438.92 | 2017-07-31 | 2019-10-04 | Business Development     |       7 | Office Assistant II        | 2017-07-31 | 2019-10-04 | $148438.92 |       7 | Business Development
+       8 | Ashlen Beckson     | Male   | abeckson7@netvibes.com        | 2016-12-26 | 2018-12-12 | Training                 |       8 | $153124.95 | 2016-12-26 | 2018-12-12 | Training                 |       8 | Programmer II              | 2016-12-26 | 2018-12-12 | $153124.95 |       8 | Training
+       9 | Filide Paiton      | Female | fpaiton8@nhs.uk               | 2018-07-26 | 2018-06-10 | Legal                    |       9 | $150506.53 | 2018-07-26 | 2018-06-10 | Legal                    |       9 | Accountant II              | 2018-07-26 | 2018-06-10 | $150506.53 |       9 | Legal
+      10 | Towny Broxis       | Male   | tbroxis9@instagram.com        | 2017-09-30 | 2019-08-12 | Business Development     |      10 | $94426.81  | 2017-09-30 | 2019-08-12 | Business Development     |      10 | Quality Control Specialist | 2017-09-30 | 2019-08-12 | $94426.81  |      10 | Business Development
+
+
+
