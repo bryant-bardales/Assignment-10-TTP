@@ -30,5 +30,4 @@ Download and install PostgreSQL on your devices (for Mac users I recommend the a
 
 **Incomplete =** Does not meet all grading criteria above. Needs improvement or missing submission.
 
-![Employee Database](https://user-images.githubusercontent.com/73409340/150267110-f72dd4f3-b036-4497-9002-699149ba49a6.jpg)
-
+![Employee Database](https://user-images.githubusercontent.com/73409340/150269849-f4de9299-7346-4808-a71f-873352acf6ee.jpg)
