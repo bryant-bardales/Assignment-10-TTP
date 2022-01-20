@@ -3,7 +3,7 @@ create table job_titles (
 	title VARCHAR(50),
 	from_date DATE,
 	to_date DATE,
-	salary INT
+	salary TEXT
 );
 insert into job_titles (empl_id, title, from_date, to_date, salary) values (1, 'Help Desk Technician', '5/6/2019', '6/19/2020', '$86789.94');
 insert into job_titles (empl_id, title, from_date, to_date, salary) values (2, 'Human Resources Manager', '5/16/2016', '7/11/2021', '$198265.82');
